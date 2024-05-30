@@ -73,11 +73,47 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form_DaftarBarang.Designer.vb">
+      <DependentUpon>Form_DaftarBarang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_DaftarBarang.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_DataPegawai.Designer.vb">
+      <DependentUpon>Form_DataPegawai.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_DataPegawai.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_DataPelanggan.Designer.vb">
+      <DependentUpon>Form_DataPelanggan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_DataPelanggan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_HargaBarang.Designer.vb">
+      <DependentUpon>Form_HargaBarang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_HargaBarang.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Kasir.Designer.vb">
+      <DependentUpon>Form_Kasir.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Kasir.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form_Login.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_Login.Designer.vb">
       <DependentUpon>Form_Login.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Stock.Designer.vb">
+      <DependentUpon>Form_Stock.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Stock.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_Utama.Designer.vb">
@@ -103,8 +139,29 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Form_DaftarBarang.resx">
+      <DependentUpon>Form_DaftarBarang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_DataPegawai.resx">
+      <DependentUpon>Form_DataPegawai.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_DataPelanggan.resx">
+      <DependentUpon>Form_DataPelanggan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_HargaBarang.resx">
+      <DependentUpon>Form_HargaBarang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Kasir.resx">
+      <DependentUpon>Form_Kasir.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Login.resx">
       <DependentUpon>Form_Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Stock.resx">
+      <DependentUpon>Form_Stock.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Utama.resx">
+      <DependentUpon>Form_Utama.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

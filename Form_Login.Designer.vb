@@ -74,6 +74,7 @@ Partial Class Form_Login
         Me.tb_password.Name = "tb_password"
         Me.tb_password.Size = New System.Drawing.Size(154, 22)
         Me.tb_password.TabIndex = 2
+        Me.tb_password.UseSystemPasswordChar = True
         '
         'btn_keluar
         '
