@@ -73,34 +73,22 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form_DaftarBarang.Designer.vb">
-      <DependentUpon>Form_DaftarBarang.vb</DependentUpon>
+    <Compile Include="Form_BK.Designer.vb">
+      <DependentUpon>Form_BK.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form_DaftarBarang.vb">
+    <Compile Include="Form_BK.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_DataPegawai.Designer.vb">
-      <DependentUpon>Form_DataPegawai.vb</DependentUpon>
+    <Compile Include="Form_BM.Designer.vb">
+      <DependentUpon>Form_BM.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form_DataPegawai.vb">
+    <Compile Include="Form_BM.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_DataPelanggan.Designer.vb">
-      <DependentUpon>Form_DataPelanggan.vb</DependentUpon>
+    <Compile Include="Form_DBM.Designer.vb">
+      <DependentUpon>Form_DBM.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form_DataPelanggan.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form_HargaBarang.Designer.vb">
-      <DependentUpon>Form_HargaBarang.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form_HargaBarang.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form_Kasir.Designer.vb">
-      <DependentUpon>Form_Kasir.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form_Kasir.vb">
+    <Compile Include="Form_DBM.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_Login.vb">
@@ -108,12 +96,6 @@
     </Compile>
     <Compile Include="Form_Login.Designer.vb">
       <DependentUpon>Form_Login.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form_Stock.Designer.vb">
-      <DependentUpon>Form_Stock.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form_Stock.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_Utama.Designer.vb">
@@ -126,6 +108,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -139,26 +122,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form_DaftarBarang.resx">
-      <DependentUpon>Form_DaftarBarang.vb</DependentUpon>
+    <EmbeddedResource Include="Form_BK.resx">
+      <DependentUpon>Form_BK.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_DataPegawai.resx">
-      <DependentUpon>Form_DataPegawai.vb</DependentUpon>
+    <EmbeddedResource Include="Form_BM.resx">
+      <DependentUpon>Form_BM.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_DataPelanggan.resx">
-      <DependentUpon>Form_DataPelanggan.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form_HargaBarang.resx">
-      <DependentUpon>Form_HargaBarang.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form_Kasir.resx">
-      <DependentUpon>Form_Kasir.vb</DependentUpon>
+    <EmbeddedResource Include="Form_DBM.resx">
+      <DependentUpon>Form_DBM.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Login.resx">
       <DependentUpon>Form_Login.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form_Stock.resx">
-      <DependentUpon>Form_Stock.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Utama.resx">
       <DependentUpon>Form_Utama.vb</DependentUpon>

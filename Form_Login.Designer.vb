@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form_Login
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,34 +20,27 @@ Partial Class Form_Login
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.tb_username = New System.Windows.Forms.TextBox()
         Me.tb_password = New System.Windows.Forms.TextBox()
         Me.btn_keluar = New System.Windows.Forms.Button()
         Me.btn_masuk = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(185, 20)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(153, 29)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Sistem Login"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(125, 120)
+        Me.Label2.Location = New System.Drawing.Point(94, 98)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(86, 20)
+        Me.Label2.Size = New System.Drawing.Size(73, 17)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Username"
         '
@@ -55,58 +48,96 @@ Partial Class Form_Login
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(125, 156)
+        Me.Label3.Location = New System.Drawing.Point(94, 127)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(83, 20)
+        Me.Label3.Size = New System.Drawing.Size(69, 17)
         Me.Label3.TabIndex = 1
         Me.Label3.Text = "Password"
         '
         'tb_username
         '
-        Me.tb_username.Location = New System.Drawing.Point(239, 120)
+        Me.tb_username.Location = New System.Drawing.Point(179, 98)
+        Me.tb_username.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.tb_username.Name = "tb_username"
-        Me.tb_username.Size = New System.Drawing.Size(154, 22)
+        Me.tb_username.Size = New System.Drawing.Size(116, 20)
         Me.tb_username.TabIndex = 1
         '
         'tb_password
         '
-        Me.tb_password.Location = New System.Drawing.Point(239, 156)
+        Me.tb_password.Location = New System.Drawing.Point(179, 127)
+        Me.tb_password.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.tb_password.Name = "tb_password"
-        Me.tb_password.Size = New System.Drawing.Size(154, 22)
+        Me.tb_password.Size = New System.Drawing.Size(116, 20)
         Me.tb_password.TabIndex = 2
         Me.tb_password.UseSystemPasswordChar = True
         '
         'btn_keluar
         '
-        Me.btn_keluar.Location = New System.Drawing.Point(129, 199)
+        Me.btn_keluar.Location = New System.Drawing.Point(97, 162)
+        Me.btn_keluar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btn_keluar.Name = "btn_keluar"
-        Me.btn_keluar.Size = New System.Drawing.Size(116, 33)
+        Me.btn_keluar.Size = New System.Drawing.Size(87, 27)
         Me.btn_keluar.TabIndex = 4
         Me.btn_keluar.Text = "Keluar"
         Me.btn_keluar.UseVisualStyleBackColor = True
         '
         'btn_masuk
         '
-        Me.btn_masuk.Location = New System.Drawing.Point(277, 199)
+        Me.btn_masuk.Location = New System.Drawing.Point(208, 162)
+        Me.btn_masuk.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btn_masuk.Name = "btn_masuk"
-        Me.btn_masuk.Size = New System.Drawing.Size(116, 33)
+        Me.btn_masuk.Size = New System.Drawing.Size(87, 27)
         Me.btn_masuk.TabIndex = 3
         Me.btn_masuk.Text = "Masuk"
         Me.btn_masuk.UseVisualStyleBackColor = True
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Brush Script MT", 27.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(136, 18)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(125, 46)
+        Me.Label1.TabIndex = 5
+        Me.Label1.Text = "Kasirku"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(174, 73)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(47, 17)
+        Me.Label4.TabIndex = 1
+        Me.Label4.Text = "Log In"
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(125, 194)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(136, 23)
+        Me.Button1.TabIndex = 6
+        Me.Button1.Text = "Lupa Password?"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Form_Login
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(520, 330)
+        Me.ClientSize = New System.Drawing.Size(390, 268)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btn_masuk)
         Me.Controls.Add(Me.btn_keluar)
         Me.Controls.Add(Me.tb_password)
         Me.Controls.Add(Me.tb_username)
         Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "Form_Login"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Sistem Login"
@@ -114,12 +145,13 @@ Partial Class Form_Login
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents tb_username As TextBox
     Friend WithEvents tb_password As TextBox
     Friend WithEvents btn_keluar As Button
     Friend WithEvents btn_masuk As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Button1 As Button
 End Class
