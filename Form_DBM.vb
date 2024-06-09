@@ -1,15 +1,15 @@
 ﻿Imports System.Data.Odbc
 Public Class Form_DBM
-    Public connection As OdbcConnection
-    Public cmmd As OdbcCommand
-    Public da As OdbcDataAdapter
-    Public ds As New DataSet
-    Public dreader As OdbcDataReader
-    Dim str As String
-    Dim sql As String
+    Public Connection As OdbcConnection
+    Public Cmd As OdbcCommand
+    Public DA As OdbcDataAdapter
+    Public DS As New DataSet
+    Public DR As OdbcDataReader
+    Dim Str As String
+    Dim Sql As String
     Public Sub openconnection()
-        str = "Driver={MySQL ODBC 3.51 Driver};database=db_kasir;server=localhost;uid=root"
-        connection = New OdbcConnection(str)
+        Str = "Driver={MySQL ODBC 3.51 Driver};database=db_kasir;server=localhost;uid=root"
+        Connection = New OdbcConnection(str)
         If connection.State = ConnectionState.Closed Then
             connection.Open()
         End If
@@ -48,8 +48,8 @@ Public Class Form_DBM
             "','" & Tb_Jenis.Text &
             "','" & Tb_Stok.Text &
             "','" & Tb_Harga.Text & "')"
-        cmmd = New OdbcCommand(sql, connection)
-        dreader = cmmd.ExecuteReader
+        Cmd = New OdbcCommand(Sql, Connection)
+        DR = Cmd.ExecuteReader
         bersih()
         tampil()
     End Sub
@@ -60,8 +60,8 @@ Public Class Form_DBM
             "', stok = '" & Tb_Stok.Text &
             "', harga = '" & Tb_Harga.Text &
             "' where kode = '" & Tb_Kode.Text & "'"
-        cmmd = New OdbcCommand(sql, connection)
-        dreader = cmmd.ExecuteReader
+        Cmd = New OdbcCommand(Sql, Connection)
+        DR = Cmd.ExecuteReader
         tampil()
         bersih()
     End Sub
@@ -71,32 +71,32 @@ Public Class Form_DBM
     End Sub
 
     Private Sub txtkode_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Tb_Kode.KeyPress
-        Dim pesan As Byte
+        Dim Pesan As Byte
         If e.KeyChar = Chr(13) Then
-            sql = "select*from tb_brg where kode = '" & Tb_Kode.Text & "'"
-            cmmd = New OdbcCommand(sql, connection)
-            dreader = cmmd.ExecuteReader
-            If dreader.Read Then
-                Tb_Nama.Text = dreader(1)
-                Tb_Jenis.Text = dreader(2)
-                Tb_Stok.Text = dreader(3)
-                Tb_Harga.Text = dreader(4)
+            Sql = "select*from tb_brg where kode = '" & Tb_Kode.Text & "'"
+            Cmd = New OdbcCommand(Sql, Connection)
+            DR = Cmd.ExecuteReader
+            If DR.Read Then
+                Tb_Nama.Text = DR(1)
+                Tb_Jenis.Text = DR(2)
+                Tb_Stok.Text = DR(3)
+                Tb_Harga.Text = DR(4)
             Else
-                pesan = MsgBox("Data Tidak Ditemukan!", vbOKOnly)
+                Pesan = MsgBox("Data Tidak Ditemukan!", vbOKOnly)
             End If
         End If
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
         If DataGridView1.RowCount > 0 Then
-            Dim baris As Integer
+            Dim Baris As Integer
             With DataGridView1
-                baris = .CurrentRow.Index
-                Tb_Kode.Text = .Item(0, baris).Value
-                Tb_Nama.Text = .Item(1, baris).Value
-                Tb_Jenis.Text = .Item(2, baris).Value
-                Tb_Stok.Text = .Item(3, baris).Value
-                Tb_Harga.Text = .Item(4, baris).Value
+                Baris = .CurrentRow.Index
+                Tb_Kode.Text = .Item(0, Baris).Value
+                Tb_Nama.Text = .Item(1, Baris).Value
+                Tb_Jenis.Text = .Item(2, Baris).Value
+                Tb_Stok.Text = .Item(3, Baris).Value
+                Tb_Harga.Text = .Item(4, Baris).Value
             End With
         End If
     End Sub
