@@ -29,20 +29,20 @@ Partial Class Form_DBM
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.Tb_Kode = New System.Windows.Forms.TextBox()
+        Me.Tb_Nama = New System.Windows.Forms.TextBox()
+        Me.Tb_Jenis = New System.Windows.Forms.TextBox()
+        Me.Tb_Stok = New System.Windows.Forms.TextBox()
+        Me.Tb_Harga = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Btn_Simpan = New System.Windows.Forms.Button()
+        Me.Btn_Edit = New System.Windows.Forms.Button()
+        Me.Btn_Hapus = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.Tb_Cari = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.Rb_Kode = New System.Windows.Forms.RadioButton()
+        Me.Rb_Nama = New System.Windows.Forms.RadioButton()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.PenggunaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -54,6 +54,7 @@ Partial Class Form_DBM
         Me.TransaksiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StockOpnameToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BarangKeluarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Btn_Cari = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -62,9 +63,10 @@ Partial Class Form_DBM
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Brush Script MT", 27.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(12, 9)
+        Me.Label1.Location = New System.Drawing.Point(16, 30)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(125, 46)
+        Me.Label1.Size = New System.Drawing.Size(157, 58)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Kasirku"
         '
@@ -72,9 +74,10 @@ Partial Class Form_DBM
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(143, 22)
+        Me.Label2.Location = New System.Drawing.Point(191, 46)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(235, 25)
+        Me.Label2.Size = New System.Drawing.Size(295, 31)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Database Management"
         '
@@ -82,9 +85,10 @@ Partial Class Form_DBM
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(17, 90)
+        Me.Label3.Location = New System.Drawing.Point(23, 130)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(40, 16)
+        Me.Label3.Size = New System.Drawing.Size(47, 20)
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "Kode"
         '
@@ -92,9 +96,10 @@ Partial Class Form_DBM
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(17, 116)
+        Me.Label4.Location = New System.Drawing.Point(23, 162)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(45, 16)
+        Me.Label4.Size = New System.Drawing.Size(53, 20)
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "Nama"
         '
@@ -102,9 +107,10 @@ Partial Class Form_DBM
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(17, 142)
+        Me.Label5.Location = New System.Drawing.Point(23, 194)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(40, 16)
+        Me.Label5.Size = New System.Drawing.Size(49, 20)
         Me.Label5.TabIndex = 3
         Me.Label5.Text = "Jenis"
         '
@@ -112,9 +118,10 @@ Partial Class Form_DBM
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(17, 168)
+        Me.Label6.Location = New System.Drawing.Point(23, 226)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(35, 16)
+        Me.Label6.Size = New System.Drawing.Size(42, 20)
         Me.Label6.TabIndex = 3
         Me.Label6.Text = "Stok"
         '
@@ -122,139 +129,156 @@ Partial Class Form_DBM
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(17, 194)
+        Me.Label7.Location = New System.Drawing.Point(23, 258)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(46, 16)
+        Me.Label7.Size = New System.Drawing.Size(55, 20)
         Me.Label7.TabIndex = 3
         Me.Label7.Text = "Harga"
         '
-        'TextBox1
+        'Tb_Kode
         '
-        Me.TextBox1.Location = New System.Drawing.Point(104, 90)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(153, 20)
-        Me.TextBox1.TabIndex = 4
+        Me.Tb_Kode.Location = New System.Drawing.Point(139, 130)
+        Me.Tb_Kode.Margin = New System.Windows.Forms.Padding(4)
+        Me.Tb_Kode.Name = "Tb_Kode"
+        Me.Tb_Kode.Size = New System.Drawing.Size(203, 22)
+        Me.Tb_Kode.TabIndex = 1
         '
-        'TextBox2
+        'Tb_Nama
         '
-        Me.TextBox2.Location = New System.Drawing.Point(104, 116)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(153, 20)
-        Me.TextBox2.TabIndex = 4
+        Me.Tb_Nama.Location = New System.Drawing.Point(139, 162)
+        Me.Tb_Nama.Margin = New System.Windows.Forms.Padding(4)
+        Me.Tb_Nama.Name = "Tb_Nama"
+        Me.Tb_Nama.Size = New System.Drawing.Size(203, 22)
+        Me.Tb_Nama.TabIndex = 2
         '
-        'TextBox3
+        'Tb_Jenis
         '
-        Me.TextBox3.Location = New System.Drawing.Point(104, 142)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(153, 20)
-        Me.TextBox3.TabIndex = 4
+        Me.Tb_Jenis.Location = New System.Drawing.Point(139, 194)
+        Me.Tb_Jenis.Margin = New System.Windows.Forms.Padding(4)
+        Me.Tb_Jenis.Name = "Tb_Jenis"
+        Me.Tb_Jenis.Size = New System.Drawing.Size(203, 22)
+        Me.Tb_Jenis.TabIndex = 3
         '
-        'TextBox4
+        'Tb_Stok
         '
-        Me.TextBox4.Location = New System.Drawing.Point(104, 168)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(153, 20)
-        Me.TextBox4.TabIndex = 4
+        Me.Tb_Stok.Location = New System.Drawing.Point(139, 226)
+        Me.Tb_Stok.Margin = New System.Windows.Forms.Padding(4)
+        Me.Tb_Stok.Name = "Tb_Stok"
+        Me.Tb_Stok.Size = New System.Drawing.Size(203, 22)
+        Me.Tb_Stok.TabIndex = 4
         '
-        'TextBox5
+        'Tb_Harga
         '
-        Me.TextBox5.Location = New System.Drawing.Point(104, 194)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(153, 20)
-        Me.TextBox5.TabIndex = 4
+        Me.Tb_Harga.Location = New System.Drawing.Point(139, 258)
+        Me.Tb_Harga.Margin = New System.Windows.Forms.Padding(4)
+        Me.Tb_Harga.Name = "Tb_Harga"
+        Me.Tb_Harga.Size = New System.Drawing.Size(203, 22)
+        Me.Tb_Harga.TabIndex = 5
         '
         'Label8
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(17, 61)
+        Me.Label8.Location = New System.Drawing.Point(23, 94)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(84, 16)
+        Me.Label8.Size = New System.Drawing.Size(104, 20)
         Me.Label8.TabIndex = 3
         Me.Label8.Text = "Data Barang"
         '
-        'Button1
+        'Btn_Simpan
         '
-        Me.Button1.Location = New System.Drawing.Point(20, 235)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 5
-        Me.Button1.Text = "SIMPAN"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Btn_Simpan.Location = New System.Drawing.Point(27, 308)
+        Me.Btn_Simpan.Margin = New System.Windows.Forms.Padding(4)
+        Me.Btn_Simpan.Name = "Btn_Simpan"
+        Me.Btn_Simpan.Size = New System.Drawing.Size(100, 28)
+        Me.Btn_Simpan.TabIndex = 6
+        Me.Btn_Simpan.Text = "SIMPAN"
+        Me.Btn_Simpan.UseVisualStyleBackColor = True
         '
-        'Button2
+        'Btn_Edit
         '
-        Me.Button2.Location = New System.Drawing.Point(101, 235)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 5
-        Me.Button2.Text = "EDIT"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Btn_Edit.Location = New System.Drawing.Point(135, 308)
+        Me.Btn_Edit.Margin = New System.Windows.Forms.Padding(4)
+        Me.Btn_Edit.Name = "Btn_Edit"
+        Me.Btn_Edit.Size = New System.Drawing.Size(100, 28)
+        Me.Btn_Edit.TabIndex = 7
+        Me.Btn_Edit.Text = "EDIT"
+        Me.Btn_Edit.UseVisualStyleBackColor = True
         '
-        'Button3
+        'Btn_Hapus
         '
-        Me.Button3.Location = New System.Drawing.Point(182, 235)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 5
-        Me.Button3.Text = "HAPUS"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.Btn_Hapus.Location = New System.Drawing.Point(243, 308)
+        Me.Btn_Hapus.Margin = New System.Windows.Forms.Padding(4)
+        Me.Btn_Hapus.Name = "Btn_Hapus"
+        Me.Btn_Hapus.Size = New System.Drawing.Size(100, 28)
+        Me.Btn_Hapus.TabIndex = 8
+        Me.Btn_Hapus.Text = "HAPUS"
+        Me.Btn_Hapus.UseVisualStyleBackColor = True
         '
         'Label9
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(278, 61)
+        Me.Label9.Location = New System.Drawing.Point(371, 94)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(51, 16)
+        Me.Label9.Size = New System.Drawing.Size(62, 20)
         Me.Label9.TabIndex = 3
         Me.Label9.Text = "Search"
         '
-        'TextBox6
+        'Tb_Cari
         '
-        Me.TextBox6.Location = New System.Drawing.Point(335, 60)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(72, 20)
-        Me.TextBox6.TabIndex = 4
+        Me.Tb_Cari.Location = New System.Drawing.Point(447, 93)
+        Me.Tb_Cari.Margin = New System.Windows.Forms.Padding(4)
+        Me.Tb_Cari.Name = "Tb_Cari"
+        Me.Tb_Cari.Size = New System.Drawing.Size(95, 22)
+        Me.Tb_Cari.TabIndex = 9
         '
         'Label10
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(278, 90)
+        Me.Label10.Location = New System.Drawing.Point(371, 130)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(37, 16)
+        Me.Label10.Size = New System.Drawing.Size(47, 20)
         Me.Label10.TabIndex = 3
         Me.Label10.Text = "Filter"
         '
-        'RadioButton1
+        'Rb_Kode
         '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(335, 89)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(50, 17)
-        Me.RadioButton1.TabIndex = 6
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Kode"
-        Me.RadioButton1.UseVisualStyleBackColor = True
+        Me.Rb_Kode.AutoSize = True
+        Me.Rb_Kode.Location = New System.Drawing.Point(447, 129)
+        Me.Rb_Kode.Margin = New System.Windows.Forms.Padding(4)
+        Me.Rb_Kode.Name = "Rb_Kode"
+        Me.Rb_Kode.Size = New System.Drawing.Size(60, 20)
+        Me.Rb_Kode.TabIndex = 11
+        Me.Rb_Kode.TabStop = True
+        Me.Rb_Kode.Text = "Kode"
+        Me.Rb_Kode.UseVisualStyleBackColor = True
         '
-        'RadioButton2
+        'Rb_Nama
         '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(335, 112)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(53, 17)
-        Me.RadioButton2.TabIndex = 6
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "Nama"
-        Me.RadioButton2.UseVisualStyleBackColor = True
+        Me.Rb_Nama.AutoSize = True
+        Me.Rb_Nama.Location = New System.Drawing.Point(447, 157)
+        Me.Rb_Nama.Margin = New System.Windows.Forms.Padding(4)
+        Me.Rb_Nama.Name = "Rb_Nama"
+        Me.Rb_Nama.Size = New System.Drawing.Size(65, 20)
+        Me.Rb_Nama.TabIndex = 12
+        Me.Rb_Nama.TabStop = True
+        Me.Rb_Nama.Text = "Nama"
+        Me.Rb_Nama.UseVisualStyleBackColor = True
         '
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(281, 135)
+        Me.DataGridView1.Location = New System.Drawing.Point(375, 185)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(307, 219)
+        Me.DataGridView1.RowHeadersWidth = 51
+        Me.DataGridView1.Size = New System.Drawing.Size(409, 278)
         Me.DataGridView1.TabIndex = 7
         '
         'MenuStrip1
@@ -263,8 +287,8 @@ Partial Class Form_DBM
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PenggunaToolStripMenuItem, Me.ViewToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(4, 2, 0, 2)
-        Me.MenuStrip1.Size = New System.Drawing.Size(600, 24)
+        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(5, 2, 0, 2)
+        Me.MenuStrip1.Size = New System.Drawing.Size(800, 28)
         Me.MenuStrip1.TabIndex = 8
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -272,77 +296,87 @@ Partial Class Form_DBM
         '
         Me.PenggunaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SetelanPenggunaToolStripMenuItem, Me.MenuStrip_Logout, Me.MenuStrip_Keluar})
         Me.PenggunaToolStripMenuItem.Name = "PenggunaToolStripMenuItem"
-        Me.PenggunaToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
+        Me.PenggunaToolStripMenuItem.Size = New System.Drawing.Size(46, 24)
         Me.PenggunaToolStripMenuItem.Text = "File"
         '
         'SetelanPenggunaToolStripMenuItem
         '
         Me.SetelanPenggunaToolStripMenuItem.Name = "SetelanPenggunaToolStripMenuItem"
-        Me.SetelanPenggunaToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
+        Me.SetelanPenggunaToolStripMenuItem.Size = New System.Drawing.Size(210, 26)
         Me.SetelanPenggunaToolStripMenuItem.Text = "Setelan Pengguna"
         '
         'MenuStrip_Logout
         '
         Me.MenuStrip_Logout.Name = "MenuStrip_Logout"
-        Me.MenuStrip_Logout.Size = New System.Drawing.Size(169, 22)
+        Me.MenuStrip_Logout.Size = New System.Drawing.Size(210, 26)
         Me.MenuStrip_Logout.Text = "Logout"
         '
         'MenuStrip_Keluar
         '
         Me.MenuStrip_Keluar.Name = "MenuStrip_Keluar"
-        Me.MenuStrip_Keluar.Size = New System.Drawing.Size(169, 22)
+        Me.MenuStrip_Keluar.Size = New System.Drawing.Size(210, 26)
         Me.MenuStrip_Keluar.Text = "Keluar"
         '
         'ViewToolStripMenuItem
         '
         Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DatabaseManajemenToolStripMenuItem, Me.TransaksiToolStripMenuItem})
         Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
-        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(55, 20)
+        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(68, 24)
         Me.ViewToolStripMenuItem.Text = "Master"
         '
         'DatabaseManajemenToolStripMenuItem
         '
         Me.DatabaseManajemenToolStripMenuItem.Name = "DatabaseManajemenToolStripMenuItem"
-        Me.DatabaseManajemenToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
+        Me.DatabaseManajemenToolStripMenuItem.Size = New System.Drawing.Size(237, 26)
         Me.DatabaseManajemenToolStripMenuItem.Text = "Database Manajemen"
         '
         'TransaksiToolStripMenuItem
         '
         Me.TransaksiToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StockOpnameToolStripMenuItem, Me.BarangKeluarToolStripMenuItem})
         Me.TransaksiToolStripMenuItem.Name = "TransaksiToolStripMenuItem"
-        Me.TransaksiToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
+        Me.TransaksiToolStripMenuItem.Size = New System.Drawing.Size(237, 26)
         Me.TransaksiToolStripMenuItem.Text = "Transaksi"
         '
         'StockOpnameToolStripMenuItem
         '
         Me.StockOpnameToolStripMenuItem.Name = "StockOpnameToolStripMenuItem"
-        Me.StockOpnameToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
+        Me.StockOpnameToolStripMenuItem.Size = New System.Drawing.Size(185, 26)
         Me.StockOpnameToolStripMenuItem.Text = "Barang Masuk"
         '
         'BarangKeluarToolStripMenuItem
         '
         Me.BarangKeluarToolStripMenuItem.Name = "BarangKeluarToolStripMenuItem"
-        Me.BarangKeluarToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
+        Me.BarangKeluarToolStripMenuItem.Size = New System.Drawing.Size(185, 26)
         Me.BarangKeluarToolStripMenuItem.Text = "Barang Keluar"
+        '
+        'Btn_Cari
+        '
+        Me.Btn_Cari.Location = New System.Drawing.Point(558, 94)
+        Me.Btn_Cari.Name = "Btn_Cari"
+        Me.Btn_Cari.Size = New System.Drawing.Size(75, 23)
+        Me.Btn_Cari.TabIndex = 10
+        Me.Btn_Cari.Text = "Cari"
+        Me.Btn_Cari.UseVisualStyleBackColor = True
         '
         'Form_DBM
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(600, 366)
+        Me.ClientSize = New System.Drawing.Size(800, 476)
+        Me.Controls.Add(Me.Btn_Cari)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.RadioButton2)
-        Me.Controls.Add(Me.RadioButton1)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox6)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Rb_Nama)
+        Me.Controls.Add(Me.Rb_Kode)
+        Me.Controls.Add(Me.Btn_Hapus)
+        Me.Controls.Add(Me.Btn_Edit)
+        Me.Controls.Add(Me.Btn_Simpan)
+        Me.Controls.Add(Me.Tb_Harga)
+        Me.Controls.Add(Me.Tb_Stok)
+        Me.Controls.Add(Me.Tb_Jenis)
+        Me.Controls.Add(Me.Tb_Nama)
+        Me.Controls.Add(Me.Tb_Cari)
+        Me.Controls.Add(Me.Tb_Kode)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
@@ -353,6 +387,7 @@ Partial Class Form_DBM
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Form_DBM"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form_DBM"
@@ -371,20 +406,20 @@ Partial Class Form_DBM
 	Friend WithEvents Label5 As Label
 	Friend WithEvents Label6 As Label
 	Friend WithEvents Label7 As Label
-	Friend WithEvents TextBox1 As TextBox
-	Friend WithEvents TextBox2 As TextBox
-	Friend WithEvents TextBox3 As TextBox
-	Friend WithEvents TextBox4 As TextBox
-	Friend WithEvents TextBox5 As TextBox
+	Friend WithEvents Tb_Kode As TextBox
+	Friend WithEvents Tb_Nama As TextBox
+	Friend WithEvents Tb_Jenis As TextBox
+	Friend WithEvents Tb_Stok As TextBox
+	Friend WithEvents Tb_Harga As TextBox
 	Friend WithEvents Label8 As Label
-	Friend WithEvents Button1 As Button
-	Friend WithEvents Button2 As Button
-	Friend WithEvents Button3 As Button
+	Friend WithEvents Btn_Simpan As Button
+	Friend WithEvents Btn_Edit As Button
+	Friend WithEvents Btn_Hapus As Button
 	Friend WithEvents Label9 As Label
-	Friend WithEvents TextBox6 As TextBox
+	Friend WithEvents Tb_Cari As TextBox
 	Friend WithEvents Label10 As Label
-	Friend WithEvents RadioButton1 As RadioButton
-	Friend WithEvents RadioButton2 As RadioButton
+	Friend WithEvents Rb_Kode As RadioButton
+	Friend WithEvents Rb_Nama As RadioButton
 	Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents PenggunaToolStripMenuItem As ToolStripMenuItem
@@ -396,4 +431,5 @@ Partial Class Form_DBM
     Friend WithEvents TransaksiToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents StockOpnameToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BarangKeluarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Btn_Cari As Button
 End Class

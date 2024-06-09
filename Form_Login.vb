@@ -22,4 +22,12 @@
             Close()
         End If
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim Pesan As Byte
+        Pesan = MsgBox("Username & Password: admin", vbYesNo)
+        If Pesan = vbYes Then
+            Me.Show()
+        End If
+    End Sub
 End Class

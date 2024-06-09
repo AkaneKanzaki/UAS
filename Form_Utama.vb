@@ -25,4 +25,5 @@ Public Class Form_Utama
 	Private Sub BarangKeluarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BarangKeluarToolStripMenuItem.Click
 		Form_BK.Show()
 	End Sub
+
 End Class

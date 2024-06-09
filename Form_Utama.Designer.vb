@@ -24,6 +24,7 @@ Partial Class Form_Utama
     Private Sub InitializeComponent()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.PenggunaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SetelanPenggunaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip_Logout = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip_Keluar = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -33,20 +34,19 @@ Partial Class Form_Utama
         Me.BarangKeluarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Tb_Total = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Tb_Jumlah = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.Tb_Kembalian = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.Tb_FilterKode = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.SetelanPenggunaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Tb_FilterJumlah = New System.Windows.Forms.TextBox()
+        Me.Btn_Tambah = New System.Windows.Forms.Button()
+        Me.Btn_Reset = New System.Windows.Forms.Button()
+        Me.Btn_Simpan = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -57,8 +57,8 @@ Partial Class Form_Utama
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PenggunaToolStripMenuItem, Me.ViewToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(4, 2, 0, 2)
-        Me.MenuStrip1.Size = New System.Drawing.Size(600, 24)
+        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(5, 2, 0, 2)
+        Me.MenuStrip1.Size = New System.Drawing.Size(800, 28)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -66,60 +66,67 @@ Partial Class Form_Utama
         '
         Me.PenggunaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SetelanPenggunaToolStripMenuItem, Me.MenuStrip_Logout, Me.MenuStrip_Keluar})
         Me.PenggunaToolStripMenuItem.Name = "PenggunaToolStripMenuItem"
-        Me.PenggunaToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
+        Me.PenggunaToolStripMenuItem.Size = New System.Drawing.Size(46, 24)
         Me.PenggunaToolStripMenuItem.Text = "File"
+        '
+        'SetelanPenggunaToolStripMenuItem
+        '
+        Me.SetelanPenggunaToolStripMenuItem.Name = "SetelanPenggunaToolStripMenuItem"
+        Me.SetelanPenggunaToolStripMenuItem.Size = New System.Drawing.Size(210, 26)
+        Me.SetelanPenggunaToolStripMenuItem.Text = "Setelan Pengguna"
         '
         'MenuStrip_Logout
         '
         Me.MenuStrip_Logout.Name = "MenuStrip_Logout"
-        Me.MenuStrip_Logout.Size = New System.Drawing.Size(112, 22)
+        Me.MenuStrip_Logout.Size = New System.Drawing.Size(210, 26)
         Me.MenuStrip_Logout.Text = "Logout"
         '
         'MenuStrip_Keluar
         '
         Me.MenuStrip_Keluar.Name = "MenuStrip_Keluar"
-        Me.MenuStrip_Keluar.Size = New System.Drawing.Size(112, 22)
+        Me.MenuStrip_Keluar.Size = New System.Drawing.Size(210, 26)
         Me.MenuStrip_Keluar.Text = "Keluar"
         '
         'ViewToolStripMenuItem
         '
         Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DatabaseManajemenToolStripMenuItem, Me.TransaksiToolStripMenuItem})
         Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
-        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(55, 20)
+        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(68, 24)
         Me.ViewToolStripMenuItem.Text = "Master"
         '
         'DatabaseManajemenToolStripMenuItem
         '
         Me.DatabaseManajemenToolStripMenuItem.Name = "DatabaseManajemenToolStripMenuItem"
-        Me.DatabaseManajemenToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
+        Me.DatabaseManajemenToolStripMenuItem.Size = New System.Drawing.Size(237, 26)
         Me.DatabaseManajemenToolStripMenuItem.Text = "Database Manajemen"
         '
         'TransaksiToolStripMenuItem
         '
         Me.TransaksiToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StockOpnameToolStripMenuItem, Me.BarangKeluarToolStripMenuItem})
         Me.TransaksiToolStripMenuItem.Name = "TransaksiToolStripMenuItem"
-        Me.TransaksiToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
+        Me.TransaksiToolStripMenuItem.Size = New System.Drawing.Size(237, 26)
         Me.TransaksiToolStripMenuItem.Text = "Transaksi"
         '
         'StockOpnameToolStripMenuItem
         '
         Me.StockOpnameToolStripMenuItem.Name = "StockOpnameToolStripMenuItem"
-        Me.StockOpnameToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.StockOpnameToolStripMenuItem.Size = New System.Drawing.Size(185, 26)
         Me.StockOpnameToolStripMenuItem.Text = "Barang Masuk"
         '
         'BarangKeluarToolStripMenuItem
         '
         Me.BarangKeluarToolStripMenuItem.Name = "BarangKeluarToolStripMenuItem"
-        Me.BarangKeluarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.BarangKeluarToolStripMenuItem.Size = New System.Drawing.Size(185, 26)
         Me.BarangKeluarToolStripMenuItem.Text = "Barang Keluar"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Brush Script MT", 27.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(12, 24)
+        Me.Label1.Location = New System.Drawing.Point(16, 30)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(125, 46)
+        Me.Label1.Size = New System.Drawing.Size(157, 58)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Kasirku"
         '
@@ -127,147 +134,156 @@ Partial Class Form_Utama
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(528, 75)
+        Me.Label2.Location = New System.Drawing.Point(704, 92)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(60, 25)
+        Me.Label2.Size = New System.Drawing.Size(75, 31)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Total"
         '
-        'TextBox1
+        'Tb_Total
         '
-        Me.TextBox1.Location = New System.Drawing.Point(409, 103)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(179, 32)
-        Me.TextBox1.TabIndex = 3
+        Me.Tb_Total.Location = New System.Drawing.Point(545, 127)
+        Me.Tb_Total.Margin = New System.Windows.Forms.Padding(4)
+        Me.Tb_Total.Multiline = True
+        Me.Tb_Total.Name = "Tb_Total"
+        Me.Tb_Total.Size = New System.Drawing.Size(237, 38)
+        Me.Tb_Total.TabIndex = 4
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(450, 147)
+        Me.Label3.Location = New System.Drawing.Point(600, 181)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(138, 25)
+        Me.Label3.Size = New System.Drawing.Size(173, 31)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Jumlah Uang"
         '
-        'TextBox2
+        'Tb_Jumlah
         '
-        Me.TextBox2.Location = New System.Drawing.Point(409, 175)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(179, 32)
-        Me.TextBox2.TabIndex = 3
+        Me.Tb_Jumlah.Location = New System.Drawing.Point(545, 215)
+        Me.Tb_Jumlah.Margin = New System.Windows.Forms.Padding(4)
+        Me.Tb_Jumlah.Multiline = True
+        Me.Tb_Jumlah.Name = "Tb_Jumlah"
+        Me.Tb_Jumlah.Size = New System.Drawing.Size(237, 38)
+        Me.Tb_Jumlah.TabIndex = 5
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(475, 223)
+        Me.Label4.Location = New System.Drawing.Point(633, 274)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(113, 25)
+        Me.Label4.Size = New System.Drawing.Size(141, 31)
         Me.Label4.TabIndex = 2
         Me.Label4.Text = "Kembalian"
         '
-        'TextBox3
+        'Tb_Kembalian
         '
-        Me.TextBox3.Location = New System.Drawing.Point(409, 251)
-        Me.TextBox3.Multiline = True
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(179, 32)
-        Me.TextBox3.TabIndex = 3
+        Me.Tb_Kembalian.Location = New System.Drawing.Point(545, 309)
+        Me.Tb_Kembalian.Margin = New System.Windows.Forms.Padding(4)
+        Me.Tb_Kembalian.Multiline = True
+        Me.Tb_Kembalian.Name = "Tb_Kembalian"
+        Me.Tb_Kembalian.Size = New System.Drawing.Size(237, 38)
+        Me.Tb_Kembalian.TabIndex = 6
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(16, 74)
+        Me.Label5.Location = New System.Drawing.Point(21, 91)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(40, 16)
+        Me.Label5.Size = New System.Drawing.Size(47, 20)
         Me.Label5.TabIndex = 2
         Me.Label5.Text = "Kode"
         '
-        'TextBox4
+        'Tb_FilterKode
         '
-        Me.TextBox4.Location = New System.Drawing.Point(57, 73)
-        Me.TextBox4.Multiline = True
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(92, 18)
-        Me.TextBox4.TabIndex = 3
+        Me.Tb_FilterKode.Location = New System.Drawing.Point(76, 90)
+        Me.Tb_FilterKode.Margin = New System.Windows.Forms.Padding(4)
+        Me.Tb_FilterKode.Multiline = True
+        Me.Tb_FilterKode.Name = "Tb_FilterKode"
+        Me.Tb_FilterKode.Size = New System.Drawing.Size(121, 21)
+        Me.Tb_FilterKode.TabIndex = 1
         '
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(20, 103)
+        Me.DataGridView1.Location = New System.Drawing.Point(27, 127)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(358, 238)
+        Me.DataGridView1.RowHeadersWidth = 51
+        Me.DataGridView1.Size = New System.Drawing.Size(477, 293)
         Me.DataGridView1.TabIndex = 4
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(160, 75)
+        Me.Label6.Location = New System.Drawing.Point(213, 92)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(51, 16)
+        Me.Label6.Size = New System.Drawing.Size(63, 20)
         Me.Label6.TabIndex = 2
         Me.Label6.Text = "Jumlah"
         '
-        'TextBox5
+        'Tb_FilterJumlah
         '
-        Me.TextBox5.Location = New System.Drawing.Point(214, 72)
-        Me.TextBox5.Multiline = True
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(92, 18)
-        Me.TextBox5.TabIndex = 3
+        Me.Tb_FilterJumlah.Location = New System.Drawing.Point(285, 89)
+        Me.Tb_FilterJumlah.Margin = New System.Windows.Forms.Padding(4)
+        Me.Tb_FilterJumlah.Multiline = True
+        Me.Tb_FilterJumlah.Name = "Tb_FilterJumlah"
+        Me.Tb_FilterJumlah.Size = New System.Drawing.Size(121, 21)
+        Me.Tb_FilterJumlah.TabIndex = 2
         '
-        'Button1
+        'Btn_Tambah
         '
-        Me.Button1.Location = New System.Drawing.Point(312, 70)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(66, 23)
-        Me.Button1.TabIndex = 5
-        Me.Button1.Text = "Tambah"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Btn_Tambah.Location = New System.Drawing.Point(416, 86)
+        Me.Btn_Tambah.Margin = New System.Windows.Forms.Padding(4)
+        Me.Btn_Tambah.Name = "Btn_Tambah"
+        Me.Btn_Tambah.Size = New System.Drawing.Size(88, 28)
+        Me.Btn_Tambah.TabIndex = 3
+        Me.Btn_Tambah.Text = "Tambah"
+        Me.Btn_Tambah.UseVisualStyleBackColor = True
         '
-        'Button2
+        'Btn_Reset
         '
-        Me.Button2.Location = New System.Drawing.Point(409, 301)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(66, 23)
-        Me.Button2.TabIndex = 5
-        Me.Button2.Text = "Reset"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Btn_Reset.Location = New System.Drawing.Point(545, 370)
+        Me.Btn_Reset.Margin = New System.Windows.Forms.Padding(4)
+        Me.Btn_Reset.Name = "Btn_Reset"
+        Me.Btn_Reset.Size = New System.Drawing.Size(88, 28)
+        Me.Btn_Reset.TabIndex = 7
+        Me.Btn_Reset.Text = "Reset"
+        Me.Btn_Reset.UseVisualStyleBackColor = True
         '
-        'Button3
+        'Btn_Simpan
         '
-        Me.Button3.Location = New System.Drawing.Point(481, 301)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(108, 23)
-        Me.Button3.TabIndex = 5
-        Me.Button3.Text = "Simpan Transaksi"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'SetelanPenggunaToolStripMenuItem
-        '
-        Me.SetelanPenggunaToolStripMenuItem.Name = "SetelanPenggunaToolStripMenuItem"
-        Me.SetelanPenggunaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.SetelanPenggunaToolStripMenuItem.Text = "Setelan Pengguna"
+        Me.Btn_Simpan.Location = New System.Drawing.Point(641, 370)
+        Me.Btn_Simpan.Margin = New System.Windows.Forms.Padding(4)
+        Me.Btn_Simpan.Name = "Btn_Simpan"
+        Me.Btn_Simpan.Size = New System.Drawing.Size(144, 28)
+        Me.Btn_Simpan.TabIndex = 8
+        Me.Btn_Simpan.Text = "Simpan Transaksi"
+        Me.Btn_Simpan.UseVisualStyleBackColor = True
         '
         'Form_Utama
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(600, 366)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Btn_Simpan)
+        Me.Controls.Add(Me.Btn_Reset)
+        Me.Controls.Add(Me.Btn_Tambah)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Tb_Kembalian)
+        Me.Controls.Add(Me.Tb_Jumlah)
+        Me.Controls.Add(Me.Tb_FilterJumlah)
+        Me.Controls.Add(Me.Tb_FilterKode)
+        Me.Controls.Add(Me.Tb_Total)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label6)
@@ -276,11 +292,10 @@ Partial Class Form_Utama
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "Form_Utama"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "E-Cashier"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -300,18 +315,18 @@ Partial Class Form_Utama
     Friend WithEvents BarangKeluarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Tb_Total As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Tb_Jumlah As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents Tb_Kembalian As TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents Tb_FilterKode As TextBox
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents Tb_FilterJumlah As TextBox
+    Friend WithEvents Btn_Tambah As Button
+    Friend WithEvents Btn_Reset As Button
+    Friend WithEvents Btn_Simpan As Button
     Friend WithEvents SetelanPenggunaToolStripMenuItem As ToolStripMenuItem
 End Class
