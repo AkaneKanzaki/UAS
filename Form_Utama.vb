@@ -66,11 +66,6 @@ Public Class Form_Utama
         Me.Hide()
     End Sub
 
-    Private Sub MenuStrip_BarangMasuk_Click(sender As Object, e As EventArgs) Handles MenuStrip_BarangMasuk.Click
-        Form_BM.Show()
-        Me.Hide()
-    End Sub
-
     Private Sub MenuStrip_BarangKeluar_Click(sender As Object, e As EventArgs) Handles MenuStrip_BarangKeluar.Click
         Form_BK.Show()
         Me.Hide()
@@ -136,7 +131,6 @@ Public Class Form_Utama
 
         Bersih()
     End Sub
-
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
         If DataGridView1.RowCount > 0 Then

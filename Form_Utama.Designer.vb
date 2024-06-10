@@ -30,7 +30,6 @@ Partial Class Form_Utama
         Me.ViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip_DatabaseManajemen = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip_Transaksi = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MenuStrip_BarangMasuk = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip_BarangKeluar = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -58,7 +57,7 @@ Partial Class Form_Utama
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(5, 2, 0, 2)
-        Me.MenuStrip1.Size = New System.Drawing.Size(800, 30)
+        Me.MenuStrip1.Size = New System.Drawing.Size(800, 28)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -66,7 +65,7 @@ Partial Class Form_Utama
         '
         Me.PenggunaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuStrip_SetelanPengguna, Me.MenuStrip_Logout, Me.MenuStrip_Keluar})
         Me.PenggunaToolStripMenuItem.Name = "PenggunaToolStripMenuItem"
-        Me.PenggunaToolStripMenuItem.Size = New System.Drawing.Size(46, 26)
+        Me.PenggunaToolStripMenuItem.Size = New System.Drawing.Size(46, 24)
         Me.PenggunaToolStripMenuItem.Text = "File"
         '
         'MenuStrip_SetelanPengguna
@@ -91,7 +90,7 @@ Partial Class Form_Utama
         '
         Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuStrip_DatabaseManajemen, Me.MenuStrip_Transaksi})
         Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
-        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(68, 26)
+        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(68, 24)
         Me.ViewToolStripMenuItem.Text = "Master"
         '
         'MenuStrip_DatabaseManajemen
@@ -102,21 +101,15 @@ Partial Class Form_Utama
         '
         'MenuStrip_Transaksi
         '
-        Me.MenuStrip_Transaksi.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuStrip_BarangMasuk, Me.MenuStrip_BarangKeluar})
+        Me.MenuStrip_Transaksi.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuStrip_BarangKeluar})
         Me.MenuStrip_Transaksi.Name = "MenuStrip_Transaksi"
         Me.MenuStrip_Transaksi.Size = New System.Drawing.Size(237, 26)
         Me.MenuStrip_Transaksi.Text = "Transaksi"
         '
-        'MenuStrip_BarangMasuk
-        '
-        Me.MenuStrip_BarangMasuk.Name = "MenuStrip_BarangMasuk"
-        Me.MenuStrip_BarangMasuk.Size = New System.Drawing.Size(185, 26)
-        Me.MenuStrip_BarangMasuk.Text = "Barang Masuk"
-        '
         'MenuStrip_BarangKeluar
         '
         Me.MenuStrip_BarangKeluar.Name = "MenuStrip_BarangKeluar"
-        Me.MenuStrip_BarangKeluar.Size = New System.Drawing.Size(185, 26)
+        Me.MenuStrip_BarangKeluar.Size = New System.Drawing.Size(224, 26)
         Me.MenuStrip_BarangKeluar.Text = "Barang Keluar"
         '
         'Label1
@@ -311,7 +304,6 @@ Partial Class Form_Utama
     Friend WithEvents ViewToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MenuStrip_DatabaseManajemen As ToolStripMenuItem
     Friend WithEvents MenuStrip_Transaksi As ToolStripMenuItem
-    Friend WithEvents MenuStrip_BarangMasuk As ToolStripMenuItem
     Friend WithEvents MenuStrip_BarangKeluar As ToolStripMenuItem
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label

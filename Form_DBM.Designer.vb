@@ -52,7 +52,6 @@ Partial Class Form_DBM
         Me.ViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip_Kasir = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip_Transaksi = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MenuStrip_BarangMasuk = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip_BarangKeluar = New System.Windows.Forms.ToolStripMenuItem()
         Me.Btn_Cari = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -327,26 +326,20 @@ Partial Class Form_DBM
         'MenuStrip_Kasir
         '
         Me.MenuStrip_Kasir.Name = "MenuStrip_Kasir"
-        Me.MenuStrip_Kasir.Size = New System.Drawing.Size(151, 26)
+        Me.MenuStrip_Kasir.Size = New System.Drawing.Size(224, 26)
         Me.MenuStrip_Kasir.Text = "Kasir"
         '
         'MenuStrip_Transaksi
         '
-        Me.MenuStrip_Transaksi.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuStrip_BarangMasuk, Me.MenuStrip_BarangKeluar})
+        Me.MenuStrip_Transaksi.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuStrip_BarangKeluar})
         Me.MenuStrip_Transaksi.Name = "MenuStrip_Transaksi"
-        Me.MenuStrip_Transaksi.Size = New System.Drawing.Size(151, 26)
+        Me.MenuStrip_Transaksi.Size = New System.Drawing.Size(224, 26)
         Me.MenuStrip_Transaksi.Text = "Transaksi"
-        '
-        'MenuStrip_BarangMasuk
-        '
-        Me.MenuStrip_BarangMasuk.Name = "MenuStrip_BarangMasuk"
-        Me.MenuStrip_BarangMasuk.Size = New System.Drawing.Size(185, 26)
-        Me.MenuStrip_BarangMasuk.Text = "Barang Masuk"
         '
         'MenuStrip_BarangKeluar
         '
         Me.MenuStrip_BarangKeluar.Name = "MenuStrip_BarangKeluar"
-        Me.MenuStrip_BarangKeluar.Size = New System.Drawing.Size(185, 26)
+        Me.MenuStrip_BarangKeluar.Size = New System.Drawing.Size(224, 26)
         Me.MenuStrip_BarangKeluar.Text = "Barang Keluar"
         '
         'Btn_Cari
@@ -428,7 +421,6 @@ Partial Class Form_DBM
     Friend WithEvents MenuStrip_Keluar As ToolStripMenuItem
     Friend WithEvents ViewToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MenuStrip_Transaksi As ToolStripMenuItem
-    Friend WithEvents MenuStrip_BarangMasuk As ToolStripMenuItem
     Friend WithEvents MenuStrip_BarangKeluar As ToolStripMenuItem
     Friend WithEvents Btn_Cari As Button
     Friend WithEvents MenuStrip_Kasir As ToolStripMenuItem

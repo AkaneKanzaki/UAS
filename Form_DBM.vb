@@ -141,12 +141,8 @@ Public Class Form_DBM
         Me.Hide()
     End Sub
 
-    Private Sub MenuStrip_BarangMasuk_Click(sender As Object, e As EventArgs) Handles MenuStrip_BarangMasuk.Click
-
+    Private Sub MenuStrip_BarangKeluar_Click_1(sender As Object, e As EventArgs) Handles MenuStrip_BarangKeluar.Click
+        Form_BK.Show()
+        Me.Hide()
     End Sub
-
-    Private Sub MenuStrip_BarangKeluar_Click(sender As Object, e As EventArgs) Handles MenuStrip_BarangKeluar.Click
-
-    End Sub
-
 End Class

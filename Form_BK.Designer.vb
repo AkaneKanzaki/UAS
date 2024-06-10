@@ -23,116 +23,137 @@ Partial Class Form_BK
 	<System.Diagnostics.DebuggerStepThrough()> _
 	Private Sub InitializeComponent()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Btn_Cari = New System.Windows.Forms.Button()
-        Me.Rb_Nama = New System.Windows.Forms.RadioButton()
-        Me.Rb_Kode = New System.Windows.Forms.RadioButton()
-        Me.Tb_Cari = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.PenggunaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuStrip_SetelanPengguna = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuStrip_Logout = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuStrip_Keluar = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuStrip_Kasir = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuStrip_DatabaseManajemen = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(13, 71)
+        Me.DataGridView1.Location = New System.Drawing.Point(13, 89)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(775, 367)
+        Me.DataGridView1.Size = New System.Drawing.Size(775, 349)
         Me.DataGridView1.TabIndex = 0
         '
-        'Btn_Cari
+        'MenuStrip1
         '
-        Me.Btn_Cari.Location = New System.Drawing.Point(200, 9)
-        Me.Btn_Cari.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Btn_Cari.Name = "Btn_Cari"
-        Me.Btn_Cari.Size = New System.Drawing.Size(75, 23)
-        Me.Btn_Cari.TabIndex = 22
-        Me.Btn_Cari.Text = "Cari"
-        Me.Btn_Cari.UseVisualStyleBackColor = True
+        Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PenggunaToolStripMenuItem, Me.ViewToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(5, 2, 0, 2)
+        Me.MenuStrip1.Size = New System.Drawing.Size(800, 28)
+        Me.MenuStrip1.TabIndex = 25
+        Me.MenuStrip1.Text = "MenuStrip1"
         '
-        'Rb_Nama
+        'PenggunaToolStripMenuItem
         '
-        Me.Rb_Nama.AutoSize = True
-        Me.Rb_Nama.Location = New System.Drawing.Point(157, 44)
-        Me.Rb_Nama.Margin = New System.Windows.Forms.Padding(4)
-        Me.Rb_Nama.Name = "Rb_Nama"
-        Me.Rb_Nama.Size = New System.Drawing.Size(65, 20)
-        Me.Rb_Nama.TabIndex = 24
-        Me.Rb_Nama.TabStop = True
-        Me.Rb_Nama.Text = "Nama"
-        Me.Rb_Nama.UseVisualStyleBackColor = True
+        Me.PenggunaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuStrip_SetelanPengguna, Me.MenuStrip_Logout, Me.MenuStrip_Keluar})
+        Me.PenggunaToolStripMenuItem.Name = "PenggunaToolStripMenuItem"
+        Me.PenggunaToolStripMenuItem.Size = New System.Drawing.Size(46, 24)
+        Me.PenggunaToolStripMenuItem.Text = "File"
         '
-        'Rb_Kode
+        'MenuStrip_SetelanPengguna
         '
-        Me.Rb_Kode.AutoSize = True
-        Me.Rb_Kode.Location = New System.Drawing.Point(89, 44)
-        Me.Rb_Kode.Margin = New System.Windows.Forms.Padding(4)
-        Me.Rb_Kode.Name = "Rb_Kode"
-        Me.Rb_Kode.Size = New System.Drawing.Size(60, 20)
-        Me.Rb_Kode.TabIndex = 23
-        Me.Rb_Kode.TabStop = True
-        Me.Rb_Kode.Text = "Kode"
-        Me.Rb_Kode.UseVisualStyleBackColor = True
+        Me.MenuStrip_SetelanPengguna.Name = "MenuStrip_SetelanPengguna"
+        Me.MenuStrip_SetelanPengguna.Size = New System.Drawing.Size(210, 26)
+        Me.MenuStrip_SetelanPengguna.Text = "Setelan Pengguna"
         '
-        'Tb_Cari
+        'MenuStrip_Logout
         '
-        Me.Tb_Cari.Location = New System.Drawing.Point(89, 9)
-        Me.Tb_Cari.Margin = New System.Windows.Forms.Padding(4)
-        Me.Tb_Cari.Name = "Tb_Cari"
-        Me.Tb_Cari.Size = New System.Drawing.Size(95, 22)
-        Me.Tb_Cari.TabIndex = 21
+        Me.MenuStrip_Logout.Name = "MenuStrip_Logout"
+        Me.MenuStrip_Logout.Size = New System.Drawing.Size(210, 26)
+        Me.MenuStrip_Logout.Text = "Logout"
         '
-        'Label10
+        'MenuStrip_Keluar
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(13, 43)
-        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(47, 20)
-        Me.Label10.TabIndex = 19
-        Me.Label10.Text = "Filter"
+        Me.MenuStrip_Keluar.Name = "MenuStrip_Keluar"
+        Me.MenuStrip_Keluar.Size = New System.Drawing.Size(210, 26)
+        Me.MenuStrip_Keluar.Text = "Keluar"
         '
-        'Label9
+        'ViewToolStripMenuItem
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(13, 9)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(62, 20)
-        Me.Label9.TabIndex = 20
-        Me.Label9.Text = "Search"
+        Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuStrip_Kasir, Me.MenuStrip_DatabaseManajemen})
+        Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
+        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(68, 24)
+        Me.ViewToolStripMenuItem.Text = "Master"
+        '
+        'MenuStrip_Kasir
+        '
+        Me.MenuStrip_Kasir.Name = "MenuStrip_Kasir"
+        Me.MenuStrip_Kasir.Size = New System.Drawing.Size(237, 26)
+        Me.MenuStrip_Kasir.Text = "Kasir"
+        '
+        'MenuStrip_DatabaseManajemen
+        '
+        Me.MenuStrip_DatabaseManajemen.Name = "MenuStrip_DatabaseManajemen"
+        Me.MenuStrip_DatabaseManajemen.Size = New System.Drawing.Size(237, 26)
+        Me.MenuStrip_DatabaseManajemen.Text = "Database Manajemen"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(188, 44)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(328, 31)
+        Me.Label2.TabIndex = 27
+        Me.Label2.Text = "Daftar Riwayat Pembelian"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Brush Script MT", 27.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(13, 28)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(157, 58)
+        Me.Label1.TabIndex = 26
+        Me.Label1.Text = "Kasirku"
         '
         'Form_BK
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.Btn_Cari)
-        Me.Controls.Add(Me.Rb_Nama)
-        Me.Controls.Add(Me.Rb_Kode)
-        Me.Controls.Add(Me.Tb_Cari)
-        Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Form_BK"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form_BK"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Btn_Cari As Button
-    Friend WithEvents Rb_Nama As RadioButton
-    Friend WithEvents Rb_Kode As RadioButton
-    Friend WithEvents Tb_Cari As TextBox
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Label9 As Label
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents PenggunaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MenuStrip_SetelanPengguna As ToolStripMenuItem
+    Friend WithEvents MenuStrip_Logout As ToolStripMenuItem
+    Friend WithEvents MenuStrip_Keluar As ToolStripMenuItem
+    Friend WithEvents ViewToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MenuStrip_DatabaseManajemen As ToolStripMenuItem
+    Friend WithEvents MenuStrip_Kasir As ToolStripMenuItem
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
 End Class
