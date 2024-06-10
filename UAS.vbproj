@@ -79,12 +79,6 @@
     <Compile Include="Form_BK.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_BM.Designer.vb">
-      <DependentUpon>Form_BM.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form_BM.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Form_DBM.Designer.vb">
       <DependentUpon>Form_DBM.vb</DependentUpon>
     </Compile>
@@ -124,9 +118,6 @@
   <ItemGroup>
     <EmbeddedResource Include="Form_BK.resx">
       <DependentUpon>Form_BK.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form_BM.resx">
-      <DependentUpon>Form_BM.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_DBM.resx">
       <DependentUpon>Form_DBM.vb</DependentUpon>

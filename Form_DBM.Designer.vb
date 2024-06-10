@@ -326,20 +326,20 @@ Partial Class Form_DBM
         'MenuStrip_Kasir
         '
         Me.MenuStrip_Kasir.Name = "MenuStrip_Kasir"
-        Me.MenuStrip_Kasir.Size = New System.Drawing.Size(224, 26)
+        Me.MenuStrip_Kasir.Size = New System.Drawing.Size(151, 26)
         Me.MenuStrip_Kasir.Text = "Kasir"
         '
         'MenuStrip_Transaksi
         '
         Me.MenuStrip_Transaksi.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuStrip_BarangKeluar})
         Me.MenuStrip_Transaksi.Name = "MenuStrip_Transaksi"
-        Me.MenuStrip_Transaksi.Size = New System.Drawing.Size(224, 26)
+        Me.MenuStrip_Transaksi.Size = New System.Drawing.Size(151, 26)
         Me.MenuStrip_Transaksi.Text = "Transaksi"
         '
         'MenuStrip_BarangKeluar
         '
         Me.MenuStrip_BarangKeluar.Name = "MenuStrip_BarangKeluar"
-        Me.MenuStrip_BarangKeluar.Size = New System.Drawing.Size(224, 26)
+        Me.MenuStrip_BarangKeluar.Size = New System.Drawing.Size(185, 26)
         Me.MenuStrip_BarangKeluar.Text = "Barang Keluar"
         '
         'Btn_Cari
@@ -383,7 +383,7 @@ Partial Class Form_DBM
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Form_DBM"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Form_DBM"
+        Me.Text = "Database Management"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()

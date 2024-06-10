@@ -136,7 +136,7 @@ Partial Class Form_BK
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Form_BK"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Form_BK"
+        Me.Text = "Riwayat Pembelian"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
