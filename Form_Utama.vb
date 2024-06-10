@@ -129,6 +129,7 @@ Public Class Form_Utama
         cmd.Parameters.AddWithValue("kode", Tb_Kode.Text)
         cmd.ExecuteNonQuery()
 
+        MessageBox.Show("Data berhasil disimpan.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Bersih()
     End Sub
 
