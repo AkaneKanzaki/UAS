@@ -105,13 +105,52 @@ Public Class Form_Utama
         Dim JumlahBayar As Decimal
         Dim Kembalian As Decimal
 
-        ' Mendapatkan total harga dari TextBox
         If Decimal.TryParse(Tb_Total.Text, TotalHarga) AndAlso Decimal.TryParse(Tb_Bayar.Text, JumlahBayar) Then
-            ' Menghitung kembalian
             Kembalian = JumlahBayar - TotalHarga
-            Tb_Kembalian.Text = Kembalian.ToString("N0") ' Format angka sebagai integer tanpa desimal
+            Tb_Kembalian.Text = Kembalian.ToString("N0")
         Else
             Tb_Kembalian.Text = "0"
+        End If
+    End Sub
+
+    Private Sub Btn_Simpan_Click(sender As Object, e As EventArgs) Handles Btn_Simpan.Click
+        Dim Pesan As Byte
+        Dim KodeBarang As String = Tb_FilterKode.Text
+        Dim HargaSatuan As Decimal
+        Dim Jumlah As Integer
+        Dim TotalHarga As Decimal
+
+        Sql = "SELECT * FROM tb_brg WHERE kode = '" & KodeBarang & "'"
+        Cmd = New OdbcCommand(Sql, Connection)
+        DR = Cmd.ExecuteReader
+        If DR.Read Then
+            HargaSatuan = Convert.ToDecimal(DR("harga"))
+            If Integer.TryParse(Tb_FilterJumlah.Text, Jumlah) Then
+                TotalHarga = HargaSatuan * Jumlah
+
+
+                ' Simpan transaksi ke database
+                Sql = "INSERT INTO tb_transaksi (kode, jumlah, total, tanggal) VALUES ('" & KodeBarang & "', " & Jumlah & ", " & TotalHarga & ", NOW())"
+                Cmd = New OdbcCommand(Sql, Connection)
+                Cmd.ExecuteNonQuery()
+
+
+                ' Update stok barang di database
+                Sql = "UPDATE tb_brg SET stok = stok - " & Jumlah & " WHERE kode = '" & KodeBarang & "'"
+                Cmd = New OdbcCommand(Sql, Connection)
+                Cmd.ExecuteNonQuery()
+
+                Pesan = MsgBox("Transaksi berhasil disimpan!", vbOKOnly)
+
+
+                ' Tampilkan riwayat pembelian di Form_BarangKeluar
+                Form_BK.LoadRiwayatPembelian()
+                Form_BK.Show()
+            Else
+                Pesan = MsgBox("Masukkan jumlah barang yang valid!", vbOKOnly)
+            End If
+        Else
+            Pesan = MsgBox("Data Tidak Ditemukan!", vbOKOnly)
         End If
     End Sub
 End Class
