@@ -31,20 +31,11 @@ Public Class Form_BK
     End Sub
 
     Sub Bersih()
-
+        Tb_Cari.Clear()
     End Sub
 
     Private Sub Form_DBM_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Openconnection()
         Tampil()
-    End Sub
-    Public Sub LoadRiwayatPembelian()
-        Sql = "SELECT * FROM tb_transaksi"
-        Cmd = New OdbcCommand(Sql, Connection)
-        DR = Cmd.ExecuteReader
-        Dim dt As New DataTable
-        dt.Load(DR)
-        DataGridView1.DataSource = dt ' Asumsikan Anda memiliki DataGridView bernama DataGridView1
-
     End Sub
 End Class

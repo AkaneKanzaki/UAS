@@ -40,11 +40,11 @@ Partial Class Form_Utama
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Tb_Kembalian = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Tb_FilterKode = New System.Windows.Forms.TextBox()
+        Me.Tb_Kode = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Tb_FilterJumlah = New System.Windows.Forms.TextBox()
-        Me.Btn_Tambah = New System.Windows.Forms.Button()
+        Me.Tb_JumlahBarang = New System.Windows.Forms.TextBox()
+        Me.Btn_TambahBarang = New System.Windows.Forms.Button()
         Me.Btn_Reset = New System.Windows.Forms.Button()
         Me.Btn_Simpan = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
@@ -58,7 +58,7 @@ Partial Class Form_Utama
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(5, 2, 0, 2)
-        Me.MenuStrip1.Size = New System.Drawing.Size(800, 28)
+        Me.MenuStrip1.Size = New System.Drawing.Size(800, 30)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -66,7 +66,7 @@ Partial Class Form_Utama
         '
         Me.PenggunaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuStrip_SetelanPengguna, Me.MenuStrip_Logout, Me.MenuStrip_Keluar})
         Me.PenggunaToolStripMenuItem.Name = "PenggunaToolStripMenuItem"
-        Me.PenggunaToolStripMenuItem.Size = New System.Drawing.Size(46, 24)
+        Me.PenggunaToolStripMenuItem.Size = New System.Drawing.Size(46, 26)
         Me.PenggunaToolStripMenuItem.Text = "File"
         '
         'MenuStrip_SetelanPengguna
@@ -91,7 +91,7 @@ Partial Class Form_Utama
         '
         Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuStrip_DatabaseManajemen, Me.MenuStrip_Transaksi})
         Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
-        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(68, 24)
+        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(68, 26)
         Me.ViewToolStripMenuItem.Text = "Master"
         '
         'MenuStrip_DatabaseManajemen
@@ -201,14 +201,14 @@ Partial Class Form_Utama
         Me.Label5.TabIndex = 2
         Me.Label5.Text = "Kode"
         '
-        'Tb_FilterKode
+        'Tb_Kode
         '
-        Me.Tb_FilterKode.Location = New System.Drawing.Point(76, 90)
-        Me.Tb_FilterKode.Margin = New System.Windows.Forms.Padding(4)
-        Me.Tb_FilterKode.Multiline = True
-        Me.Tb_FilterKode.Name = "Tb_FilterKode"
-        Me.Tb_FilterKode.Size = New System.Drawing.Size(121, 21)
-        Me.Tb_FilterKode.TabIndex = 1
+        Me.Tb_Kode.Location = New System.Drawing.Point(76, 90)
+        Me.Tb_Kode.Margin = New System.Windows.Forms.Padding(4)
+        Me.Tb_Kode.Multiline = True
+        Me.Tb_Kode.Name = "Tb_Kode"
+        Me.Tb_Kode.Size = New System.Drawing.Size(121, 21)
+        Me.Tb_Kode.TabIndex = 1
         '
         'DataGridView1
         '
@@ -231,24 +231,24 @@ Partial Class Form_Utama
         Me.Label6.TabIndex = 2
         Me.Label6.Text = "Jumlah"
         '
-        'Tb_FilterJumlah
+        'Tb_JumlahBarang
         '
-        Me.Tb_FilterJumlah.Location = New System.Drawing.Point(285, 89)
-        Me.Tb_FilterJumlah.Margin = New System.Windows.Forms.Padding(4)
-        Me.Tb_FilterJumlah.Multiline = True
-        Me.Tb_FilterJumlah.Name = "Tb_FilterJumlah"
-        Me.Tb_FilterJumlah.Size = New System.Drawing.Size(121, 21)
-        Me.Tb_FilterJumlah.TabIndex = 2
+        Me.Tb_JumlahBarang.Location = New System.Drawing.Point(285, 89)
+        Me.Tb_JumlahBarang.Margin = New System.Windows.Forms.Padding(4)
+        Me.Tb_JumlahBarang.Multiline = True
+        Me.Tb_JumlahBarang.Name = "Tb_JumlahBarang"
+        Me.Tb_JumlahBarang.Size = New System.Drawing.Size(121, 21)
+        Me.Tb_JumlahBarang.TabIndex = 2
         '
-        'Btn_Tambah
+        'Btn_TambahBarang
         '
-        Me.Btn_Tambah.Location = New System.Drawing.Point(416, 86)
-        Me.Btn_Tambah.Margin = New System.Windows.Forms.Padding(4)
-        Me.Btn_Tambah.Name = "Btn_Tambah"
-        Me.Btn_Tambah.Size = New System.Drawing.Size(88, 28)
-        Me.Btn_Tambah.TabIndex = 3
-        Me.Btn_Tambah.Text = "Tambah"
-        Me.Btn_Tambah.UseVisualStyleBackColor = True
+        Me.Btn_TambahBarang.Location = New System.Drawing.Point(416, 86)
+        Me.Btn_TambahBarang.Margin = New System.Windows.Forms.Padding(4)
+        Me.Btn_TambahBarang.Name = "Btn_TambahBarang"
+        Me.Btn_TambahBarang.Size = New System.Drawing.Size(88, 28)
+        Me.Btn_TambahBarang.TabIndex = 3
+        Me.Btn_TambahBarang.Text = "Tambah"
+        Me.Btn_TambahBarang.UseVisualStyleBackColor = True
         '
         'Btn_Reset
         '
@@ -277,12 +277,12 @@ Partial Class Form_Utama
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.Btn_Simpan)
         Me.Controls.Add(Me.Btn_Reset)
-        Me.Controls.Add(Me.Btn_Tambah)
+        Me.Controls.Add(Me.Btn_TambahBarang)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Tb_Kembalian)
         Me.Controls.Add(Me.Tb_Bayar)
-        Me.Controls.Add(Me.Tb_FilterJumlah)
-        Me.Controls.Add(Me.Tb_FilterKode)
+        Me.Controls.Add(Me.Tb_JumlahBarang)
+        Me.Controls.Add(Me.Tb_Kode)
         Me.Controls.Add(Me.Tb_Total)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -321,11 +321,11 @@ Partial Class Form_Utama
     Friend WithEvents Label4 As Label
     Friend WithEvents Tb_Kembalian As TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents Tb_FilterKode As TextBox
+    Friend WithEvents Tb_Kode As TextBox
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Label6 As Label
-    Friend WithEvents Tb_FilterJumlah As TextBox
-    Friend WithEvents Btn_Tambah As Button
+    Friend WithEvents Tb_JumlahBarang As TextBox
+    Friend WithEvents Btn_TambahBarang As Button
     Friend WithEvents Btn_Reset As Button
     Friend WithEvents Btn_Simpan As Button
     Friend WithEvents MenuStrip_SetelanPengguna As ToolStripMenuItem

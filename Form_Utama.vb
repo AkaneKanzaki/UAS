@@ -18,11 +18,11 @@ Public Class Form_Utama
     End Sub
 
     Sub Tampil()
-        DA = New OdbcDataAdapter("select*from tb_brg", Connection)
+        DA = New OdbcDataAdapter("select * from tb_brg", Connection)
         DS = New DataSet
         DS.Clear()
         DA.Fill(DS, "tb_brg")
-        DataGridView1.DataSource = (DS.Tables("tb_brg"))
+        DataGridView1.DataSource = DS.Tables("tb_brg")
         DataGridView1.Columns(0).Width = 100
         DataGridView1.Columns(1).Width = 100
         DataGridView1.Columns(2).Width = 100
@@ -31,8 +31,8 @@ Public Class Form_Utama
     End Sub
 
     Sub Bersih()
-        Tb_FilterKode.Clear()
-        Tb_FilterJumlah.Clear()
+        Tb_Kode.Clear()
+        Tb_JumlahBarang.Clear()
         Tb_Total.Clear()
         Tb_Bayar.Clear()
         Tb_Kembalian.Clear()
@@ -46,11 +46,13 @@ Public Class Form_Utama
     Private Sub MenuStrip_SetelanPengguna_Click(sender As Object, e As EventArgs) Handles MenuStrip_SetelanPengguna.Click
 
     End Sub
+
     Private Sub MenuStrip_Logout_Click(sender As Object, e As EventArgs) Handles MenuStrip_Logout.Click
         Dim FR_Login As New Form_Login
         FR_Login.Show()
         Me.Close()
     End Sub
+
     Private Sub MenuStrip_Keluar_Click(sender As Object, e As EventArgs) Handles MenuStrip_Keluar.Click
         Dim Pesan As Byte
         Pesan = MsgBox("Apakah anda ingin keluar dari aplikasi?", vbYesNo)
@@ -58,6 +60,7 @@ Public Class Form_Utama
             End
         End If
     End Sub
+
     Private Sub MenuStrip_DatabaseManajemen_Click(sender As Object, e As EventArgs) Handles MenuStrip_DatabaseManajemen.Click
         Form_DBM.Show()
         Me.Hide()
@@ -73,17 +76,21 @@ Public Class Form_Utama
         Me.Hide()
     End Sub
 
-    Private Sub Btn_Tambah_Click(sender As Object, e As EventArgs) Handles Btn_Tambah.Click
+    Private Sub Btn_Reset_Click(sender As Object, e As EventArgs) Handles Btn_Reset.Click
+        Bersih()
+    End Sub
+
+    Private Sub Btn_TambahBarang_Click(sender As Object, e As EventArgs) Handles Btn_TambahBarang.Click
         Dim Pesan As Byte
         Dim HargaSatuan As Decimal
         Dim Jumlah As Integer
         Dim TotalHarga As Decimal
-        Sql = "select*from tb_brg where kode = '" & Tb_FilterKode.Text & "'"
+        Sql = "select * from tb_brg where kode = '" & Tb_Kode.Text & "'"
         Cmd = New OdbcCommand(Sql, Connection)
         DR = Cmd.ExecuteReader
         If DR.Read Then
             HargaSatuan = Convert.ToDecimal(DR("harga"))
-            If Integer.TryParse(Tb_FilterJumlah.Text, Jumlah) Then
+            If Integer.TryParse(Tb_JumlahBarang.Text, Jumlah) Then
                 TotalHarga = HargaSatuan * Jumlah
                 Tb_Total.Text = TotalHarga.ToString("N0")
             Else
@@ -94,13 +101,7 @@ Public Class Form_Utama
         End If
     End Sub
 
-
-
-    Private Sub Btn_Reset_Click(sender As Object, e As EventArgs) Handles Btn_Reset.Click
-        Bersih()
-    End Sub
-
-    Private Sub Tb_Jumlah_TextChanged(sender As Object, e As EventArgs) Handles Tb_Bayar.TextChanged
+    Private Sub Tb_Bayar_TextChanged(sender As Object, e As EventArgs) Handles Tb_Bayar.TextChanged
         Dim TotalHarga As Decimal
         Dim JumlahBayar As Decimal
         Dim Kembalian As Decimal
@@ -114,43 +115,36 @@ Public Class Form_Utama
     End Sub
 
     Private Sub Btn_Simpan_Click(sender As Object, e As EventArgs) Handles Btn_Simpan.Click
-        Dim Pesan As Byte
-        Dim KodeBarang As String = Tb_FilterKode.Text
-        Dim HargaSatuan As Decimal
-        Dim Jumlah As Integer
-        Dim TotalHarga As Decimal
+        Dim cmd As OdbcCommand
+        Dim sql As String
 
-        Sql = "SELECT * FROM tb_brg WHERE kode = '" & KodeBarang & "'"
-        Cmd = New OdbcCommand(Sql, Connection)
-        DR = Cmd.ExecuteReader
-        If DR.Read Then
-            HargaSatuan = Convert.ToDecimal(DR("harga"))
-            If Integer.TryParse(Tb_FilterJumlah.Text, Jumlah) Then
-                TotalHarga = HargaSatuan * Jumlah
+        sql = "INSERT INTO tb_transaksi (id, kode, jumlah, harga, total, tanggal) VALUES (?,?,?,?,?,?)"
+        cmd = New OdbcCommand(sql, Connection)
+        cmd.Parameters.AddWithValue("id", DBNull.Value)
+        cmd.Parameters.AddWithValue("kode", Tb_Kode.Text)
+        cmd.Parameters.AddWithValue("jumlah", Tb_JumlahBarang.Text)
+        cmd.Parameters.AddWithValue("harga", Tb_Bayar.Text)
+        cmd.Parameters.AddWithValue("total", Tb_Total.Text)
+        cmd.Parameters.AddWithValue("tanggal", DateTime.Now)
+        cmd.ExecuteNonQuery()
 
+        sql = "UPDATE tb_brg SET stok = stok - ? WHERE kode = ?"
+        cmd = New OdbcCommand(sql, Connection)
+        cmd.Parameters.AddWithValue("stok", Tb_JumlahBarang.Text)
+        cmd.Parameters.AddWithValue("kode", Tb_Kode.Text)
+        cmd.ExecuteNonQuery()
 
-                ' Simpan transaksi ke database
-                Sql = "INSERT INTO tb_transaksi (kode, jumlah, total, tanggal) VALUES ('" & KodeBarang & "', " & Jumlah & ", " & TotalHarga & ", NOW())"
-                Cmd = New OdbcCommand(Sql, Connection)
-                Cmd.ExecuteNonQuery()
-
-
-                ' Update stok barang di database
-                Sql = "UPDATE tb_brg SET stok = stok - " & Jumlah & " WHERE kode = '" & KodeBarang & "'"
-                Cmd = New OdbcCommand(Sql, Connection)
-                Cmd.ExecuteNonQuery()
-
-                Pesan = MsgBox("Transaksi berhasil disimpan!", vbOKOnly)
+        Bersih()
+    End Sub
 
 
-                ' Tampilkan riwayat pembelian di Form_BarangKeluar
-                Form_BK.LoadRiwayatPembelian()
-                Form_BK.Show()
-            Else
-                Pesan = MsgBox("Masukkan jumlah barang yang valid!", vbOKOnly)
-            End If
-        Else
-            Pesan = MsgBox("Data Tidak Ditemukan!", vbOKOnly)
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+        If DataGridView1.RowCount > 0 Then
+            Dim Baris As Integer
+            With DataGridView1
+                Baris = .CurrentRow.Index
+                Tb_Kode.Text = .Item(0, Baris).Value
+            End With
         End If
     End Sub
 End Class
